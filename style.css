@@ -1,0 +1,64 @@
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+}
+
+.fas {
+  color: black;
+  margin: 5px;
+}
+
+.container {
+  margin: 2% 0% 2% 0%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.profile {
+  width: 25%;
+}
+
+.avatar {
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.bio-container {
+  margin: 1% 1% 1% 1%;
+  margin-inline-end: 78%;
+  width: 100%;
+}
+
+.repos {
+  width: 50%;
+  text-align: center;
+}
+
+.repo {
+  width: 45%;
+  height: 100px;
+}
+
+h1, h3 {
+  margin: auto 1% auto;
+}
+
+.names {
+  margin: 1% 0 1% 0;
+}
+
+.info {
+  margin: 1% 0 1% 0;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
