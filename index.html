@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js"></script>
+  <script src="https://kit.fontawesome.com/f09fef1962.js" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
+  <title>GitHub Bio</title>
+</head>
+<body>
+  <article class="container" id="bio">
+  </article>
+</body>
+</html>
+
+<script id="lodash-template" type="text/x-lodash-template">
+  <div class="profile">
+    <% if (avatar_url) { %>
+      <a href=<%= avatar_url %>>
+        <img class="avatar" src=<%= avatar_url %>>
+      </a>
+    <% } %>
+    <div class="names">
+      <% if (name) { %>
+        <h1><%= name %></h1>
+      <% } %>
+      <% if (login) { %>
+        <h3 class="f3 light-silver"><%= login %></h3>
+      <% } %>
+    </div>
+    <div class="info">
+      <% if (bio) { %>
+        <div class="bio-container f5 mid-gray">
+          <p><%= bio %></p>
+        </div>
+      <% } %>
+      <% if (company) { %>
+        <p><span class="fas fa-building"></span><%= company %></p>
+      <% } %>
+      <% if (location) { %>
+        <p><span class="fas fa-map-marked-alt"></span><%= location %></p>
+      <% } %>
+      <% if (email) { %>
+        <p><span class="fas fa-envelope"></span><%= email %></p>
+      <% } %>
+      <% if (blog !== '') { %>
+        <a href=https://<%= blog %>><span class="fas fa-link"></span><%= blog %></a>
+      <% } %>
+      <p><span class="fas fa-clock"></span>Joined <%= moment(created_at).format('MMMM DD, YYYY') %></p>
+    </div>
+  </div>
+  <div class="repos">
+    <h2 class="item">Repositories</h2>
+    <div class="container">
+    </div>
+  </div>
+</script>
